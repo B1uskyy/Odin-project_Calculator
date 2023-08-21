@@ -18,7 +18,8 @@ function divide(num1, num2) {
 
 let firstNumber; 
 let operator; 
-let secondNumber; 
+let secondNumber;  
+let displayNumber; 
 
 function operate(operator, num1, num2) {
 
@@ -27,3 +28,64 @@ function operate(operator, num1, num2) {
     else if (operator=="*") return multiply(num1, num2); 
     else return divide(num1,num2);  
 }
+
+let output = document.querySelector(".screen")
+let keys = document.querySelectorAll(".number")
+
+keys.forEach((key) => key.addEventListener("click", function(){
+
+    if(operator == undefined && firstNumber == undefined) {
+        firstNumber = key.textContent;
+        console.log(firstNumber)
+        displayNumber = firstNumber;
+    }
+
+    else if (operator == undefined && firstNumber != undefined) {
+        firstNumber += key.textContent; 
+        console.log(firstNumber); 
+        displayNumber = firstNumber;
+    }
+
+    else if (operator != undefined && secondNumber == undefined) {
+        secondNumber = key.textContent; 
+        displayNumber = secondNumber;
+        console.log(secondNumber);
+        
+    }
+
+    else {
+        secondNumber += key.textContent; 
+        displayNumber = secondNumber;
+        console.log(secondNumber);
+    }
+
+
+    output.innerHTML = displayNumber;
+    
+}))
+
+let operators = document.querySelectorAll(".operator"); 
+
+operators.forEach((op) => op.addEventListener("click", function() {
+
+    operator = op.textContent; 
+    console.log("Ny operator er: " + operator); 
+
+}))
+
+
+
+let clear = document.querySelector("#clear"); 
+
+clear.addEventListener("click", function() {
+    output.innerHTML = ""; 
+    firstNumber = undefined; 
+    secondNumber = undefined; 
+})
+
+let equals = document.querySelector("#equals"); 
+
+
+
+
+

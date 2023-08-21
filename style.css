@@ -4,11 +4,21 @@
 
 }
 
+.screen {
+    width: 250px;
+    outline: 3px solid black;
+    height: 100px;
+    border-radius: 5%;
+    background-color: lightgray;
+    margin-bottom: 15px;
+}
+
 .row1, .row2, .row3{
     display: flex;
 }
 
-input{
-    display: block;
-    margin: 10px 0 10px 0;
+div {
+    margin: 3px;
 }
+
+
