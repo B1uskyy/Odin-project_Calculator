@@ -1,6 +1,6 @@
 
 function add(num1, num2) {
-    return num1 + num2; 
+    return parseInt(num1) + parseInt(num2); 
 }
 
 function subtract(num1, num2) {
@@ -81,10 +81,21 @@ clear.addEventListener("click", function() {
     output.innerHTML = ""; 
     firstNumber = undefined; 
     secondNumber = undefined; 
+    operator = undefined; 
 })
 
 let equals = document.querySelector("#equals"); 
 
+equals.addEventListener("click", function() {
+
+    console.log("Første tall er: " + firstNumber + " Andre nummer er: " + secondNumber); 
+
+    output.innerHTML = operate(operator, firstNumber, secondNumber); 
+    firstNumber = undefined; 
+    secondNumber = undefined; 
+    operator = undefined; 
+
+})
 
 
 
