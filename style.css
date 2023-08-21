@@ -1,0 +1,14 @@
+.number {
+    width: 50px;
+    height: 25px;
+
+}
+
+.row1, .row2, .row3{
+    display: flex;
+}
+
+input{
+    display: block;
+    margin: 10px 0 10px 0;
+}
