@@ -1,7 +1,13 @@
 .number {
     width: 50px;
     height: 25px;
+    margin: 1px;
 
+}
+
+#zero {
+   height: 25px;
+   width: 100px;
 }
 
 .screen {
@@ -17,8 +23,6 @@
     display: flex;
 }
 
-div {
-    margin: 3px;
-}
+
 
 
