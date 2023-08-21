@@ -90,8 +90,10 @@ equals.addEventListener("click", function() {
 
     console.log("Første tall er: " + firstNumber + " Andre nummer er: " + secondNumber); 
 
-    output.innerHTML = operate(operator, firstNumber, secondNumber); 
-    firstNumber = undefined; 
+    let calculation = operate(operator, firstNumber, secondNumber)
+
+    output.innerHTML = calculation; 
+    firstNumber = calculation; 
     secondNumber = undefined; 
     operator = undefined; 
 
